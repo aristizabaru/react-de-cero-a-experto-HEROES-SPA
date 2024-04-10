@@ -1,22 +1,15 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
-import { Navbar } from '../ui';
-import { MarvelPage, DcPage } from '../modules/heroes';
+import { Routes, Route } from 'react-router-dom';
 import { LoginPage } from '../modules/auth';
-
+import { HeroesRoutes } from '../modules/heroes';
 
 export const AppRouter = () => {
     return (
-        <>
-            <Navbar />
-            <Routes>
-                <Route path='marvel' element={<MarvelPage />} />
-                <Route path='dc' element={<DcPage />} />
+        <Routes>
+            <Route path='login' element={<LoginPage />} />
 
-                <Route path='login' element={<LoginPage />} />
-
-                <Route path='/' element={<Navigate to='marvel' />} />
-            </Routes>
-        </>
-
+            {/* {uso de wildcard para que cualquier ruta que no sea login
+                    cargue el router de heroes} */}
+            <Route path='/*' element={<HeroesRoutes />} />
+        </Routes>
     );
 };
