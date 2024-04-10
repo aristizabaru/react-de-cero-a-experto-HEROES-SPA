@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles.css';
+import { HeroesApp } from './HeroesApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <h1>Hola</h1>
-  </React.StrictMode>,
+    <HeroesApp />
+  </React.StrictMode >,
 );
