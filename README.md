@@ -4,7 +4,9 @@
 
 Este es un repositorio personal para ejecución del proyecto del curso **React: De cero a experto (HEROES SPA)** de **Fernando Herrera** en la plataforma Udemy. Para acceder al curso completo puede hacer [clic aquí](https://www.udemy.com/course/react-cero-experto/)
 
-El proyecto desarrollado a continuación se explora el concepto de una SPA usando componentes de React. Dentro de la configuración y desarrollo del proyecto se usa [Vite](https://vitejs.dev/) como bundler.
+El proyecto desarrollado a continuación se explora el concepto de una SPA usando componentes de React. La SPA construida implementa el manejo de un router y un contexto global para una autenticación simulada.
+
+Dentro de la configuración y desarrollo del proyecto se usa [Vite](https://vitejs.dev/) como bundler.
 
 ## Requerimientos
 
