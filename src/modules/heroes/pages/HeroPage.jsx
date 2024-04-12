@@ -5,15 +5,18 @@ import { getHeroesById } from '../helpers';
 export const HeroPage = () => {
 
     // Custom hook de react router para tomar los parámetros de la URL
-    const { id, ...url } = useParams();
+    // const { id, ...url } = useParams();
+    const { id } = useParams();
     const navigate = useNavigate();
     const hero = useMemo(() => getHeroesById(id), [id]);
 
     const onNavigateBack = () => {
         // retorna a la última página visitada usando el historial de navegación
-        // navigate(-1);
-        const publisher = url['*'].split('/')[1].split('-')[0];
-        navigate(`/${publisher}`);
+        navigate(-1);
+
+        // Retorna al publisher luego de hacer una depuración de los parámetros
+        // const publisher = url['*'].split('/')[1].split('-')[0];
+        // navigate(`/${publisher}`);
     };
 
     // Redirecciona a /marvel si la ruta no es valida, si el id no se encuentra
