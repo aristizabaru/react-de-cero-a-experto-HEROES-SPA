@@ -11,7 +11,7 @@ export const HeroCard = ({
 
 }) => {
 
-    const heroImageUrl = useMemo(() => `/assets/heroes/${id}.jpg`, [id]);
+    const heroImageUrl = useMemo(() => `/heroes/${id}.jpg`, [id]);
 
     return (
         <div className='col'>
